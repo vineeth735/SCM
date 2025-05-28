@@ -8,7 +8,7 @@ def clear_screen():
 def pause():
     input("\nPress Enter to continue...")
 
-# Menu display
+# Menu pause() display
 def show_main_menu():
     print("==== PYTHON CALCULATOR ====")
     print("1. Basic Operations (+, -, *, /, %)")
@@ -25,7 +25,7 @@ def show_scientific_menu():
     print("6. Log base 10")
     print("7. Back to Main Menu")
 
-# Basic operations
+# Basic operations pause()
 def basic_calculator():
     try:
         num1 = float(input("Enter first number: "))
