@@ -33,9 +33,9 @@ void menu() {
     do {
         printf("\n=== College Management System ===\n");
         printf("1. Add Student\n");
-        printf("2. Display All Students\n");
+        printf("2. Display All Students roll number\n");
         printf("3. Search Student by Roll Number\n");
-        printf("4. Delete Student by Roll Number\n");
+        printf("4. Delete the Student by Roll Number\n");
         printf("5. Save and Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
