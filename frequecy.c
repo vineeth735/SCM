@@ -23,8 +23,8 @@ int main() {
     int choice;
 
     printf("=== Frequency Counter ===\n");
-    printf("1. Enter text manually\n");
-    printf("2. Read text from file\n");
+    printf("1. Enter text exactly\n");
+    printf("2. Read text from the file\n");
     printf("Choose option (1/2): ");
     scanf("%d", &choice);
     getchar(); // Clear newline
