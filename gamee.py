@@ -60,7 +60,7 @@ def main():
             print(f"🎉 Player {current_player} wins!")
             break
         elif is_full(board):
-            print("🤝 It's a draw!")
+            print("🤝 It is a draw!")
             break
 
         # Switch players
