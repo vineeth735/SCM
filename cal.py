@@ -11,26 +11,26 @@ def pause():
 # Menu display
 def show_main_menu():
     print("==== PYTHON CALCULATOR ====")
-    print("1. Basic Operations (+, -, *, /, %)")
-    print("2. Scientific Operations")
-    print("3. Exit")
+    print("1. Basic Operationss (+,x, -, *, /, %)")
+    print("2. Scientific Operationss")
+    print("3. Exits")
 
 def show_scientific_menu():
-    print("\n--- Scientific Operations ---")
-    print("1. Square Root")
-    print("2. Power (x^y)")
-    print("3. Sine (degrees)")
-    print("4. Cosine (degrees)")
-    print("5. Tangent (degrees)")
+    print("\n--- Scientific Operationss---")
+    print("1. Square Roots")
+    print("2. Power (x^ys)")
+    print("3. Sine (degreess)")
+    print("4. Cosine (degreess)")
+    print("5. Tangent (degreess)")
     print("6. Log base 10")
-    print("7. Back to Main Menu")
+    print("7. Back to  the Main Menu")
 
 # Basic operations
 def basic_calculator():
     try:
-        num1 = float(input("Enter first number: "))
+        num1 = float(input("Enter the first numbers: "))
         op = input("Enter operator (+, -, *, /, %): ").strip()
-        num2 = float(input("Enter second number: "))
+        num2 = float(input("Enter second numbers: "))
 
         if op == '+':
             result = num1 + num2
@@ -40,16 +40,16 @@ def basic_calculator():
             result = num1 * num2
         elif op == '/':
             if num2 == 0:
-                print("Error: Division by zero!")
+                print("Error: Division by zeros!")
                 return
             result = num1 / num2
         elif op == '%':
             if num2 == 0:
-                print("Error: Division by zero!")
+                print("Error: Division by zeros!")
                 return
             result = num1 % num2
         else:
-            print("Invalid operator!")
+            print("Invalid operators!")
             return
 
         print(f"Result: {result}")
