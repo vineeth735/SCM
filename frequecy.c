@@ -22,15 +22,15 @@ int main() {
     char text[10000];
     int choice;
 
-    printf("=== Frequency Counter ===\n");
-    printf("1. Enter text manually\n");
-    printf("2. Read text from file\n");
-    printf("Choose option (1/2): ");
+    printf("=== Frequency Counters ===\n");
+    printf("1. Enter text manuallys\n");
+    printf("2. Read text from files\n");
+    printf("Choose options (1/2): ");
     scanf("%d", &choice);
     getchar(); // Clear newline
 
     if (choice == 1) {
-        printf("Enter text (end with `~` on a new line):\n");
+        printf("Enter texts (end with `~` on a new line):\n");
         int i = 0;
         char ch;
         while ((ch = getchar()) != '~' && i < sizeof(text) - 1) {
@@ -39,17 +39,17 @@ int main() {
         text[i] = '\0';
     } else if (choice == 2) {
         char filename[100];
-        printf("Enter filename: ");
+        printf("Enter filenames: ");
         scanf("%s", filename);
         FILE *f = fopen(filename, "r");
         if (!f) {
-            printf("Cannot open file.\n");
+            printf("Cannot open files.\n");
             return 1;
         }
         fread(text, 1, sizeof(text), f);
         fclose(f);
     } else {
-        printf("Invalid choice.\n");
+        printf("Invalid choices.\n");
         return 1;
     }
 
