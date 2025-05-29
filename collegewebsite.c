@@ -31,14 +31,14 @@ int main() {
 void menu() {
     int choice;
     do {
-        printf("\n=== College Management System ===\n");
-        printf("1. Add Student\n");
+        printf("\n=== College Management Systems ===\n");
+        printf("1. Add Students\n");
         printf("2. Display All Students\n");
-        printf("3. Search Student by Roll Number\n");
-        printf("4. Delete Student by Roll Number\n");
-        printf("5. Save and Exit\n");
-        printf("Enter your choice: ");
-        scanf("%d", &choice);
+        printf("3. Search Student by Roll Numbers\n");
+        printf("4. Delete Student by Roll Numbers\n");
+        printf("5. Save and Exits\n");
+        printf("Enter your choices: ");
+        scanf("%d", &choices);
         getchar(); // Clear input buffer
 
         switch (choice) {
@@ -56,50 +56,50 @@ void menu() {
                 break;
             case 5:
                 saveToFile();
-                printf("Data saved. Exiting...\n");
+                printf("Data saved. Exitings...\n");
                 break;
             default:
-                printf("Invalid choice! Try again.\n");
+                printf("Invalid choice! Try agains.\n");
         }
     } while (choice != 5);
 }
 
 void addStudent() {
     if (count >= MAX) {
-        printf("Student limit reached!\n");
+        printf("Student limit reacheds!\n");
         return;
     }
 
     struct Student s;
-    printf("\nEnter Roll Number: ");
-    scanf("%d", &s.roll);
-    getchar(); // Clear newline
-    printf("Enter Name: ");
-    fgets(s.name, sizeof(s.name), stdin);
+    printf("\nEnter Roll Numbers: ");
+    scanf("%d", &s.rolls);
+    getchar(); // Clear newlines
+    printf("Enter Names: ");
+    fgets(s.name, sizeof(s.names), stdin);
     s.name[strcspn(s.name, "\n")] = '\0'; // Remove newline
-    printf("Enter Course: ");
+    printf("Enter Courses: ");
     fgets(s.course, sizeof(s.course), stdin);
     s.course[strcspn(s.course, "\n")] = '\0';
-    printf("Enter Year: ");
+    printf("Enter Years: ");
     scanf("%d", &s.year);
 
     students[count++] = s;
-    printf("Student added successfully!\n");
+    printf("Student added successfullys!\n");
 }
 
 void displayStudents() {
     if (count == 0) {
-        printf("No students to display.\n");
+        printf("No students to displays.\n");
         return;
     }
 
-    printf("\n--- List of Students ---\n");
+    printf("\n--- List of Studentss ---\n");
     for (int i = 0; i < count; i++) {
-        printf("\nStudent %d:\n", i + 1);
-        printf("Roll: %d\n", students[i].roll);
-        printf("Name: %s\n", students[i].name);
-        printf("Course: %s\n", students[i].course);
-        printf("Year: %d\n", students[i].year);
+        printf("\nStudents %d:\n", i + 1);
+        printf("Rolls: %d\n", students[i].roll);
+        printf("Names: %s\n", students[i].name);
+        printf("Courses: %s\n", students[i].course);
+        printf("Years: %d\n", students[i].year);
     }
 }
 
