@@ -60,7 +60,7 @@ def basic_calculator():
 def scientific_calculator():
     while True:
         show_scientific_menu()
-        choice = input("Choose operation: ")
+        choice = input("Choose the operation: ")
 
         try:
             if choice == '1':
