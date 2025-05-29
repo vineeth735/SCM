@@ -71,7 +71,7 @@ void addStudent() {
     }
 
     struct Student s;
-    printf("\nEnter Roll Number: ");
+    printf("\nEnter the Roll Number: ");
     scanf("%d", &s.roll);
     getchar(); // Clear newline
     printf("Enter Name: ");
