@@ -30,7 +30,7 @@ int main() {
     getchar(); // Clear newline
 
     if (choice == 1) {
-        printf("Enter text (end with `~` on a new line):\n");
+        printf("Enter the text (end with `~` on a new line):\n");
         int i = 0;
         char ch;
         while ((ch = getchar()) != '~' && i < sizeof(text) - 1) {
